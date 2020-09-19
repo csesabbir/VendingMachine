@@ -1,0 +1,37 @@
+int a,b,c,d,e;
+void setup() {
+  // put your setup code here, to run once:
+
+  Serial.begin(9600);
+  pinMode(37,INPUT);
+  pinMode(39,INPUT);
+  pinMode(41,INPUT);
+  pinMode(43,INPUT);
+  pinMode(45,INPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+ a=digitalRead(37);
+ b=digitalRead(39);
+ c=digitalRead(41);
+ d=digitalRead(43);
+ e=digitalRead(45);
+ if(a==0||c==0)
+ {
+  Serial.println("One");
+  
+ }
+ else if(b==0||d==0){
+  Serial.println("Two");
+  }
+  else if(e==0){
+   Serial.println("Five");
+    }
+    else{
+    //nothing to do.
+    }
+
+ delay(30);
+}
